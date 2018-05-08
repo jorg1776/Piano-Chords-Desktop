@@ -2,8 +2,12 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Piano_Chords_Desktop"
-             StartupUri="MainWindow.xaml">
+             xmlns:viewmodels="clr-namespace:Piano_Chords_Desktop.ViewModels"
+             xmlns:views="clr-namespace:Piano_Chords_Desktop.Views"
+             StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-         
+        <DataTemplate DataType="{x:Type viewmodels:ChordDisplayViewModel}">
+            <views:ChordDisplayView/>
+        </DataTemplate>
     </Application.Resources>
 </Application>
