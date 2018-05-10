@@ -66,6 +66,7 @@
         </ComboBox>
         <!--#endregion-->
 
+        <!--#region Chord selection-->
         <Label Content="Select Chord: " HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" Margin="347,7,0,0" Grid.Row="1"/>
         <ComboBox SelectedItem="{Binding SelectedChord}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="337,30,0,0" Height="20" Width="100" Grid.Row="1">
             <ComboBoxItem IsSelected="True">Major</ComboBoxItem>
@@ -74,5 +75,6 @@
             <ComboBoxItem>Major 7th</ComboBoxItem>
             <ComboBoxItem>Minor 7th</ComboBoxItem>
         </ComboBox>
+        <!--#endregion-->
     </Grid>
 </Page>
