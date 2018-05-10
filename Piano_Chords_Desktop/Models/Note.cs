@@ -1,8 +1,9 @@
-﻿using System.Windows.Media;
+﻿using System.ComponentModel;
+using System.Windows.Media;
 
 namespace Piano_Chords_Desktop.Models
 {
-    public class Note
+    public class Note : INotifyPropertyChanged
     {
         public string Value { get; private set; }
         private bool _isSelected = false;
@@ -16,7 +17,17 @@ namespace Piano_Chords_Desktop.Models
                 else { Color = DecideColor(Value); }
             }
         }
-        public Brush Color { get; private set; }
+
+        private Brush _color;
+        public Brush Color
+        {
+            get { return _color; }
+            private set
+            {
+                _color = value;
+                NotifyPropertyChanged(nameof(Color));
+            }
+        }
 
         public Note(string value)
         {
@@ -29,5 +40,8 @@ namespace Piano_Chords_Desktop.Models
             if (value.Length == 1) { return Brushes.White; }
             else { return Brushes.Black; }
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void NotifyPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }

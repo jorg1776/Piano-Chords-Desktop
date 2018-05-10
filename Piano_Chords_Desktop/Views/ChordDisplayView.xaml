@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
       xmlns:local="clr-namespace:Piano_Chords_Desktop.Views"
       xmlns:viewmodels="clr-namespace:Piano_Chords_Desktop.ViewModels"
       mc:Ignorable="d" 
@@ -23,31 +24,44 @@
         <Rectangle Name="C" Width="30" Height="100" HorizontalAlignment="Left" Margin="178,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[0].Color}"/>
         <Rectangle Name="Cs" Width="15" Height="65" HorizontalAlignment="Left" Margin="199,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[1].Color}"/>
         <Rectangle Name="D" Width="30" Height="100" HorizontalAlignment="Left" Margin="206,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[2].Color}"/>
-        <Rectangle Name="Ds" Width="15" Height="65" HorizontalAlignment="Left" Margin="227,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[1].Color}"/>
+        <Rectangle Name="Ds" Width="15" Height="65" HorizontalAlignment="Left" Margin="227,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[3].Color}"/>
         <Rectangle Name="E" Width="30" Height="100" HorizontalAlignment="Left" Margin="234,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[4].Color}"/>
         <Rectangle Name="F" Width="30" Height="100" HorizontalAlignment="Left" Margin="262,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[5].Color}"/>
-        <Rectangle Name="Fs" Width="15" Height="65" HorizontalAlignment="Left" Margin="283,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[1].Color}"/>
+        <Rectangle Name="Fs" Width="15" Height="65" HorizontalAlignment="Left" Margin="283,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[6].Color}"/>
         <Rectangle Name="G" Width="30" Height="100" HorizontalAlignment="Left" Margin="290,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[7].Color}"/>
-        <Rectangle Name="CG" Width="15" Height="65" HorizontalAlignment="Left" Margin="311,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[1].Color}"/>
+        <Rectangle Name="CG" Width="15" Height="65" HorizontalAlignment="Left" Margin="311,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[8].Color}"/>
         <Rectangle Name="A" Width="30" Height="100" HorizontalAlignment="Left" Margin="318,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[9].Color}"/>
-        <Rectangle Name="As" Width="15" Height="65" HorizontalAlignment="Left" Margin="339,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[1].Color}"/>
+        <Rectangle Name="As" Width="15" Height="65" HorizontalAlignment="Left" Margin="339,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[10].Color}"/>
         <Rectangle Name="B" Width="30" Height="100" HorizontalAlignment="Left" Margin="346,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[11].Color}"/>
         <Rectangle Name="C2" Width="30" Height="100" HorizontalAlignment="Left" Margin="374,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[12].Color}"/>
         <Rectangle Name="Cs2" Width="15" Height="65" HorizontalAlignment="Left" Margin="395,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[13].Color}"/>
         <Rectangle Name="D2" Width="30" Height="100" HorizontalAlignment="Left" Margin="402,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[14].Color}"/>
-        <Rectangle Name="Ds2" Width="15" Height="65" HorizontalAlignment="Left" Margin="423,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[13].Color}"/>
+        <Rectangle Name="Ds2" Width="15" Height="65" HorizontalAlignment="Left" Margin="423,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[15].Color}"/>
         <Rectangle Name="E2" Width="30" Height="100" HorizontalAlignment="Left" Margin="430,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[16].Color}"/>
         <Rectangle Name="F2" Width="30" Height="100" HorizontalAlignment="Left" Margin="458,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[17].Color}"/>
-        <Rectangle Name="Fs2" Width="15" Height="65" HorizontalAlignment="Left" Margin="479,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[13].Color}"/>
+        <Rectangle Name="Fs2" Width="15" Height="65" HorizontalAlignment="Left" Margin="479,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[18].Color}"/>
         <Rectangle Name="G2" Width="30" Height="100" HorizontalAlignment="Left" Margin="486,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[19].Color}"/>
-        <Rectangle Name="Gs2" Width="15" Height="65" HorizontalAlignment="Left" Margin="507,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[13].Color}"/>
+        <Rectangle Name="Gs2" Width="15" Height="65" HorizontalAlignment="Left" Margin="507,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[20].Color}"/>
         <Rectangle Name="A2" Width="30" Height="100" HorizontalAlignment="Left" Margin="514,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[21].Color}"/>
-        <Rectangle Name="As2" Width="15" Height="65" HorizontalAlignment="Left" Margin="535,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[13].Color}"/>
+        <Rectangle Name="As2" Width="15" Height="65" HorizontalAlignment="Left" Margin="535,-32.5,0,0" Panel.ZIndex="1" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[22].Color}"/>
         <Rectangle Name="B2" Width="30" Height="100" HorizontalAlignment="Left" Margin="542,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[23].Color}"/>
-        <Rectangle Name="C3" Width="30" Height="100" HorizontalAlignment="Left" Margin="570,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[12].Color}"/>
+        <Rectangle Name="C3" Width="30" Height="100" HorizontalAlignment="Left" Margin="570,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[24].Color}"/>
         <!--#endregion-->
         
         <Label Content="Select Root: " HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" Margin="50,7,0,0" Grid.Row="1"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,30,0,0" Height="20" Width="75" Grid.Row="1"/>
+        <ComboBox SelectedItem="{Binding SelectedRoot}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,30,0,0" Height="20" Width="75" Grid.Row="1">
+            <ComboBoxItem>C</ComboBoxItem>
+            <ComboBoxItem>C#</ComboBoxItem>
+            <ComboBoxItem>D</ComboBoxItem>
+            <ComboBoxItem>D#</ComboBoxItem>
+            <ComboBoxItem>E</ComboBoxItem>
+            <ComboBoxItem>F</ComboBoxItem>
+            <ComboBoxItem>F#</ComboBoxItem>
+            <ComboBoxItem>G</ComboBoxItem>
+            <ComboBoxItem>G#</ComboBoxItem>
+            <ComboBoxItem>A</ComboBoxItem>
+            <ComboBoxItem>A#</ComboBoxItem>
+            <ComboBoxItem>B</ComboBoxItem>
+        </ComboBox>
     </Grid>
 </Page>
