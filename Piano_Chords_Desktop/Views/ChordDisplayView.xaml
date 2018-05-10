@@ -48,9 +48,10 @@
         <Rectangle Name="C3" Width="30" Height="100" HorizontalAlignment="Left" Margin="570,0,0,0" StrokeThickness="2" Stroke="Black" Fill="{Binding Notes[24].Color}"/>
         <!--#endregion-->
         
-        <Label Content="Select Root: " HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" Margin="50,7,0,0" Grid.Row="1"/>
-        <ComboBox SelectedItem="{Binding SelectedRoot}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,30,0,0" Height="20" Width="75" Grid.Row="1">
-            <ComboBoxItem>C</ComboBoxItem>
+        <!--#region Root note selection-->
+        <Label Content="Select Root: " HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" Margin="200,7,0,0" Grid.Row="1"/>
+        <ComboBox SelectedItem="{Binding SelectedRoot}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="207,30,0,0" Height="20" Width="60" Grid.Row="1">
+            <ComboBoxItem IsSelected="True">C</ComboBoxItem>
             <ComboBoxItem>C#</ComboBoxItem>
             <ComboBoxItem>D</ComboBoxItem>
             <ComboBoxItem>D#</ComboBoxItem>
@@ -62,6 +63,16 @@
             <ComboBoxItem>A</ComboBoxItem>
             <ComboBoxItem>A#</ComboBoxItem>
             <ComboBoxItem>B</ComboBoxItem>
+        </ComboBox>
+        <!--#endregion-->
+
+        <Label Content="Select Chord: " HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" Margin="347,7,0,0" Grid.Row="1"/>
+        <ComboBox SelectedItem="{Binding SelectedChord}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="337,30,0,0" Height="20" Width="100" Grid.Row="1">
+            <ComboBoxItem IsSelected="True">Major</ComboBoxItem>
+            <ComboBoxItem>Minor</ComboBoxItem>
+            <ComboBoxItem>Dominant 7th</ComboBoxItem>
+            <ComboBoxItem>Major 7th</ComboBoxItem>
+            <ComboBoxItem>Minor 7th</ComboBoxItem>
         </ComboBox>
     </Grid>
 </Page>

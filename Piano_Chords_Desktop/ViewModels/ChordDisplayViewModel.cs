@@ -42,9 +42,19 @@ namespace Piano_Chords_Desktop.ViewModels
                 if (value.Equals(_selectedRoot)) { return; }
 
                 _selectedRoot = value;
-                ClearKeyboard();
                 HighlightChord(_selectedRoot);
-                NotifyPropertyChanged(nameof(SelectedRoot));
+            }
+        }
+
+        private string _selectedChord;
+        public string SelectedChord
+        {
+            get { return _selectedChord; }
+            set
+            {
+                if (value.Equals(_selectedChord)) { return; }
+                _selectedChord = value;
+                HighlightChord(SelectedRoot);
             }
         }
 
@@ -58,11 +68,19 @@ namespace Piano_Chords_Desktop.ViewModels
 
         public void HighlightChord(string root)
         {
+            ClearKeyboard();
+
             root = TrimString(root);
             int rootIndex = GetNoteIndex(root);
 
             Notes[rootIndex].IsSelected = true;
 
+            int[] chordDefinition = GetChordDefinition(SelectedChord);
+
+            foreach (int steps in chordDefinition)
+            {
+                Notes[rootIndex + steps].IsSelected = true;
+            }
         }
 
         private int GetNoteIndex(string note)
@@ -85,10 +103,30 @@ namespace Piano_Chords_Desktop.ViewModels
             }
         }
 
-        private string TrimString(string root)
+        private int[] GetChordDefinition(string chord)
         {
-            string[] splitString = root.Split(' ');
-            return splitString[1];
+            chord = TrimString(chord);
+
+            switch (chord)
+            {
+                case "Major": return ChordDefinitions.Major;
+                case "Minor": return ChordDefinitions.Minor;
+                default: return ChordDefinitions.Major;
+            }
+        }
+
+        private string TrimString(string input)
+        {
+            if (input != null)
+            {
+                string[] splitString = input.Split(' ');
+                if (splitString.Length > 1)
+                    return splitString[1];
+                else
+                    return input;
+            }
+            else
+                return input;
         }
     }
 }

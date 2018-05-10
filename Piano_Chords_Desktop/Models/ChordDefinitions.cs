@@ -2,6 +2,8 @@
 {
     public class ChordDefinitions
     {
-        public static int[] Major { get; set; } = { 4, 3 };
+        public static int[] Major { get; set; } = { 4, 7 };
+
+        public static int[] Minor { get; set; } = { 3, 7 };
     }
 }
